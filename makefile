@@ -1,2 +1,6 @@
-angryly: main.c
-	gcc main.c -ltermbox -o angryly
+CC=gcc
+FLAGS=-ltermbox
+
+all: angryly
+angryly: src/main.c
+	gcc $^ $(FLAGS) -o bin/$@
